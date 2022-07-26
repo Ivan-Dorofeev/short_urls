@@ -3,9 +3,11 @@ Short urls from console
 
 # Information
 If you enter short url in console, you will get number of clicks on the link:
+
 ![img.png](img/img.png)
 
 If you enter long url in console, you will get a short link of this link:
+
 ![img_1.png](img/img_1.png)
 
 # Install
