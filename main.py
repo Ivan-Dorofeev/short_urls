@@ -32,10 +32,10 @@ if __name__ == "__main__":
     load_dotenv()
     token = os.environ['BITLY_TOKEN']
     try:
-        some_lurl = str(input("Введите ссылочку: "))
-        if is_bitlink(token, some_lurl):
-            print("Кликов по ссылке: ", count_clicks(token, some_lurl))
+        user_url = str(input("Введите ссылочку: "))
+        if is_bitlink(token, user_url):
+            print("Кликов по ссылке: ", count_clicks(token, user_url))
         else:
-            print('Битлинк', shorten_link(token, some_lurl))
+            print('Битлинк', shorten_link(token, user_url))
     except requests.exceptions.HTTPError as exc:
         print(exc)
