@@ -30,7 +30,7 @@ def is_bitlink(token, url):
 
 if __name__ == "__main__":
     load_dotenv()
-    token = os.environ['TOKEN']
+    token = os.environ['BITLY_TOKEN']
     try:
         some_lurl = str(input("Введите ссылочку: "))
         if is_bitlink(token, some_lurl):
