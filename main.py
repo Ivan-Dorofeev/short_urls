@@ -7,6 +7,7 @@ def count_clicks(token, url):
     auth_headers = {'Authorization': f'Bearer {token}'}
     total_clicks_url = f'https://api-ssl.bitly.com/v4/bitlinks/{url}/clicks/summary'
     response = requests.get(total_clicks_url, params={'units': -1}, headers=auth_headers)
+    response.raise_for_status()
     count_clicks = response.json()['total_clicks']
     return count_clicks
 
@@ -24,10 +25,7 @@ def is_bitlink(token, url):
     auth_headers = {'Authorization': f'Bearer {token}'}
     is_bitlink_url = f'https://api-ssl.bitly.com/v4/bitlinks/{url}'
     response = requests.get(is_bitlink_url, headers=auth_headers)
-    if response.ok:
-        return True
-    else:
-        return False
+    return response.ok
 
 
 if __name__ == "__main__":
