@@ -2,8 +2,6 @@ import os
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()
-
 
 def count_clicks(token, url):
     auth_headers = {'Authorization': f'Bearer {token}'}
@@ -33,6 +31,7 @@ def is_bitlink(token, url):
 
 
 if __name__ == "__main__":
+    load_dotenv()
     token = os.environ['TOKEN']
     try:
         some_lurl = str(input("Введите ссылочку: "))
