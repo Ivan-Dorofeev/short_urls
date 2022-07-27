@@ -24,4 +24,4 @@ or
 
 # Errors
 If something wrong, you will see error in console: (example)
-![img.png](img/img_2.png)![img_2.png](img/img_2.png)
+![img_2.png](img/img_2.png)
