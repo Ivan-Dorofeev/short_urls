@@ -1,4 +1,4 @@
-import os
+import os, argparse
 import requests
 from dotenv import load_dotenv
 
@@ -31,11 +31,16 @@ def is_bitlink(token, url):
 if __name__ == "__main__":
     load_dotenv()
     token = os.environ['BITLY_TOKEN']
+
+    parser = argparse.ArgumentParser(
+        description="Программа сокращает вашу длинную ссылку, либо показывает сколько раз по переанной ссылке "
+                    "переходили (если она короткая)")
+    parser.add_argument("url", help="Ваша ссылка")
+    args = parser.parse_args()
     try:
-        user_url = input("Введите ссылочку: ")
-        if is_bitlink(token, user_url):
-            print("Кликов по ссылке: ", count_clicks(token, user_url))
+        if is_bitlink(token, args.url):
+            print("Кликов по ссылке: ", count_clicks(token, args.url))
         else:
-            print('Битлинк', shorten_link(token, user_url))
+            print('Битлинк', shorten_link(token, args.url))
     except requests.exceptions.HTTPError as exc:
         print(exc)

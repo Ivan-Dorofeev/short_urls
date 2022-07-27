@@ -18,8 +18,10 @@ First of all, install packages from **_requirements.txt_**:
 # Run
 Open console and run python file **_main.py_**:
 
-```python main.py```
+```python main.py https://yandex.ru```
+or 
+```python main.py bit.ly/3PYgCpf```
 
 # Errors
 If something wrong, you will see error in console: (example)
-![img_2.png](img/img_2.png)
+![img.png](img/img_2.png)![img_2.png](img/img_2.png)
