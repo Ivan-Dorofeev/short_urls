@@ -4,7 +4,7 @@ Short urls from console
 # Information
 If you enter short url in console, you will get number of clicks on the link:
 
-![img_2.png](img/img_2.png)
+![img.png](img/img_2.png)
 
 If you enter long url in console, you will get a short link of this link:
 
