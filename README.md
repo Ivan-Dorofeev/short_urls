@@ -12,11 +12,13 @@ If you enter long url in console, you will get a short link of this link:
 
 # Install
 First of all, install packages from **_requirements.txt_**:
->python pip -m install -r requirements.txt
+
+```python pip -m install -r requirements.txt```
 
 # Run
 Open console and run python file **_main.py_**:
->python main.py
+
+```python main.py```
 
 # Errors
 If something wrong, you will see error in console: (example)
